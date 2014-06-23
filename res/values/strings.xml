@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Easy Timer</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <!-- Button Text -->
+    <string name="timer">Timer</string>
+    <string name="count_down">Count Down</string>
+    <string name="toggle_timer_start">Start</string>
+    <string name="toggle_timer_stop">Stop</string>
+
+</resources>

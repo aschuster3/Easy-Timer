@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="3"
+    android:orientation="vertical" >
+    
+    <com.rfserverstudios.easytimer.views.CountDownView
+        android:id="@+id/text_timer_count_down"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="@dimen/clock_size"
+        android:gravity="center"/>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"/>
+
+    <Button
+        android:id="@+id/button_timer_count_down"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+		android:layout_weight=".5"
+		android:layout_gravity="end"
+        android:text="@string/toggle_timer_start" />
+
+</LinearLayout>
