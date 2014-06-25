@@ -3,20 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
     
-    <Chronometer 
-        android:id="@+id/chronometer_timer"
+    <com.rfserverstudios.easytimer.views.RotatingTimerView 
+        android:id="@+id/arc_test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"/>
-    
-    <Button
-        android:id="@+id/button_toggle_timer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:text="@string/toggle_timer_start"/>
-    
+        android:layout_centerInParent="true"/>
     
 
 </RelativeLayout>
