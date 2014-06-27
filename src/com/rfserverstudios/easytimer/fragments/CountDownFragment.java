@@ -63,6 +63,12 @@ public class CountDownFragment extends Fragment implements OnClickListener, OnCo
         
         timerRunning = !timerRunning;
     }
+    
+    @Override
+    public void onCountDownTick(CountDownView view)
+    {
+        //do nada
+    }
 
     @Override
     public void onCountDownDone(CountDownView view)

@@ -9,5 +9,12 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"/>
     
+    <com.rfserverstudios.easytimer.views.CountDownView
+        android:id="@+id/center_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/clock_size"/>
+    
 
 </RelativeLayout>

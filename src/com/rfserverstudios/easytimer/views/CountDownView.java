@@ -19,6 +19,7 @@ public class CountDownView extends TextView
      */
     public interface OnCountDownListener 
     {
+        void onCountDownTick(CountDownView view);
         void onCountDownDone(CountDownView view);
     }
     
@@ -67,11 +68,15 @@ public class CountDownView extends TextView
         
         if(hours > 0)
         {
-            conversion = String.format("%02d:%02d:%02d.%03d", hours, minutes, seconds, milliseconds);
+            conversion = String.format("%d:%02d:%02d.%03d", hours, minutes, seconds, milliseconds);
+        }
+        else if(minutes > 0)
+        {
+            conversion = String.format("%d:%02d.%03d", minutes, seconds, milliseconds);
         }
         else
         {
-            conversion = String.format("%02d:%02d.%03d", minutes, seconds, milliseconds);
+            conversion = String.format("%02d.%03d", seconds, milliseconds);
         }
         
         return conversion;
@@ -85,6 +90,10 @@ public class CountDownView extends TextView
             public void onTick(long millisUntilFinished)
             {
                 setClock(millisUntilFinished);
+                if(onCountDownListener != null)
+                {
+                    onCountDownListener.onCountDownTick(CountDownView.this);
+                }
             }
 
             @Override
@@ -98,7 +107,10 @@ public class CountDownView extends TextView
     
     public final void pause()
     {
-        countDownTimer.cancel();
+        if(countDownTimer != null)
+        {
+            countDownTimer.cancel();
+        }
     }
     
     public final void stop()
@@ -109,8 +121,6 @@ public class CountDownView extends TextView
             onCountDownListener.onCountDownDone(this);
         }
     }
-    
-
     
     public void setOnCountDownListener(OnCountDownListener onCountDownListener)
     {

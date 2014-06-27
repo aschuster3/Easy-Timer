@@ -1,7 +1,6 @@
 package com.rfserverstudios.easytimer;
 
 import com.rfserverstudios.easytimer.fragments.CountDownFragment;
-import com.rfserverstudios.easytimer.fragments.HomeFragment;
 import com.rfserverstudios.easytimer.fragments.TimerFragment;
 
 import android.support.v7.app.ActionBarActivity;
@@ -22,7 +21,7 @@ public class HomeActivity extends ActionBarActivity
         if (savedInstanceState == null)
         {
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, HomeFragment.newInstance()).commit();
+                    .add(R.id.container, TimerFragment.newInstance()).commit();
         }
     }
 
